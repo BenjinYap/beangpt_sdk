@@ -1,4 +1,5 @@
 import { OpenAIClient, OpenAIModel } from "../../../../src/model_clients/openai/OpenAIClient.js";
+import { Input } from "../../../../src/Input.js";
 
 describe('OpenAIClient', function() {
   let client:OpenAIClient;
@@ -8,13 +9,9 @@ describe('OpenAIClient', function() {
       apiKey: (global as any).__env.openai.api_key,
     });
   });
-  // const client = new OpenAIClient(OpenAIModel.GPT_4_1_NANO);
 
-  it('should be able to play a Song', async function() {
-    const result = await client.sendPrompt(OpenAIModel.GPT_4_1_NANO, 'hi');
-    console.log(result);
-  });
-
-  it('awd', () => {
+  it('should do everything', async function() {
+    const result = await client.sendPrompt(OpenAIModel.GPT_4_1_NANO, new Input('hi'));
+    expect(result.model).toContain(OpenAIModel.GPT_4_1_NANO);
   });
 });

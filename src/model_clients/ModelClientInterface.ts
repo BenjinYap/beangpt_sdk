@@ -1,5 +1,6 @@
-import { OpenAIModel } from "./openai/OpenAIClient.js";
+import { Input } from "../Input.js";
+import { Output } from "../Output.js";
 
-export interface ModelClientInterface {
-  sendPrompt(model:OpenAIModel, prompt:string):Promise<any>;
+export interface ModelClientInterface<Model> {
+  sendPrompt(model:Model, prompt:Input):Promise<Output>;
 }

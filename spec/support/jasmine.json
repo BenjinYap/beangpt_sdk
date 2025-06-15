@@ -1,0 +1,14 @@
+{
+  "spec_dir": "spec",
+  "spec_files": [
+    "**/*spec.ts"
+  ],
+  "helpers": [
+    "**/helpers/*.ts"
+  ],
+  "env": {
+    "stopSpecOnExpectationFailure": false,
+    "random": true,
+    "forbidDuplicateNames": true
+  }
+}

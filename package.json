@@ -1,7 +1,9 @@
 {
   "name": "beangpt_sdk",
-  "version": "0.0.0",
-  "main": "index.js",
+  "version": "0.0.2",
+  "files": [
+    "src"
+  ],
   "scripts": {
     "build": "tsc",
     "test": "tsx node_modules/jasmine/bin/jasmine"
